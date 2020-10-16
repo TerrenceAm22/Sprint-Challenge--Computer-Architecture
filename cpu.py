@@ -396,26 +396,4 @@ class CPU:
         # Interrupts are re-enabled
         self.interrupts_enabled = 1
 
-    # def interrupt(self, bit):
-    #     # Disable further interrupts.
-    #     self.interrupts_enabled = 0
-    #     # Clear the bit in the IS register.
-    #     self.reg[6] = self.reg[6] ^ (0b00000001 << bit)
-    #     # The PC register is pushed on the stack.
-    #     self.reg[7] -= 1
-    #     self.ram[self.reg[7]] = self.pc
-    #     # The FL register is pushed on the stack.
-    #     self.reg[7] -= 1
-    #     self.ram[self.reg[7]] = self.fl
-    #     # Registers R0-R6 are pushed on the stack in that order.
-    #     self.PUSH(0)
-    #     self.PUSH(1)
-    #     self.PUSH(2)
-    #     self.PUSH(3)
-    #     self.PUSH(4)
-    #     self.PUSH(5)
-    #     self.PUSH(6)
-    #     # The address (vector in interrupt terminology) of the appropriate handler is looked up from the interrupt vector table.
-    #     vector = self.ram[~(bit ^ 0b0111) & 0xFF]
-    #     # Set the PC to the handler address.
-    #     self.pc = vector
+    
